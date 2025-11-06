@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pytest_cache/
+*.egg-info/
+
+# Envs
+venv/
+.env
+
+# Output & logs
+audio_outputs/
+tts_log.txt
+
+# OS
+.DS_Store
+Thumbs.db
