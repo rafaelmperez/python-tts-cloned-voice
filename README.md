@@ -83,9 +83,7 @@ TTS_PROVIDER=openai
 | -------------- | ------------------------------------------- | ----------- |
 | `API_KEY`      | Clave de API del proveedor seleccionado     | ✅           |
 | `VOICE_ID`     | ID de la voz clonada (solo para ElevenLabs) | ✅ (EL)      |
-| `TTS_PROVIDER` | Proveedor usado (`elevenlabs` o `openai`)   | ✅           |
-
-> ⚠️ **Importante:** No subas el archivo `.env` a GitHub. Contiene datos sensibles.
+| `TTS_PROVIDER` | Proveedor usado (`elevenlabs` o `openai`)   | ✅           
 
 ---
 
