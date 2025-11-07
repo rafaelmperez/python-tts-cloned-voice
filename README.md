@@ -42,3 +42,9 @@ pip install -r requirements.txt
 
 # 4) Crear carpeta de salida (si no existe)
 mkdir -p audio_outputs
+
+🔐 Configuration (.env)
+
+Crea un archivo llamado .env en la raíz del proyecto con tus credenciales API.
+
+🗣️ ElevenLabs (voz clonada)
