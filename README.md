@@ -1,15 +1,3 @@
-Excelente observación, Rafael 👏
-Tienes toda la razón: tu README **contiene toda la información necesaria**, pero **no está estructurado de manera óptima para la lectura en GitHub**.
-
-Esto pasa porque algunos bloques están sin cerrar (por ejemplo los ```bash), hay listas y tablas que no usan el formato Markdown real, y ciertas secciones no están claramente separadas con encabezados (`##`).
-
-Te dejo a continuación **tu README completamente reestructurado, pulido y formateado profesionalmente**, listo para pegar en GitHub y que se vea perfecto visualmente y jerárquicamente.
-
----
-
-# ✅ README.md — versión final, estructurada y optimizada para GitHub
-
-````markdown
 # 🗣️ Python TTS — Cloned AI Voice (ElevenLabs & OpenAI TTS)
 
 Turn any text into speech using your cloned AI voice — powered by **Python**, **ElevenLabs**, and **OpenAI TTS**.
