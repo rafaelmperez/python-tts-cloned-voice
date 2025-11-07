@@ -57,13 +57,30 @@ def read_text_input(file_path: str = None, input_text: str = None) -> str:
         return input("Introduce el texto que deseas convertir a voz:\n> ").strip()
 
 
-def save_audio(content: bytes, filename: str = "output.mp3") -> str:
-    """Guarda los bytes de audio en un archivo."""
-    path = os.path.join(OUTPUT_DIR, filename)
+def save_audio(content: bytes, base_filename: str = "output.mp3") -> str:
+    """
+    Guarda los bytes de audio en un archivo con nombre incremental
+    para evitar sobrescribir archivos existentes.
+    Ejemplo: output_1.mp3, output_2.mp3, etc.
+    """
+    name, ext = os.path.splitext(base_filename)
+    index = 1
+
+    # Buscar un nombre de archivo libre en la carpeta de salida
+    while True:
+        numbered_filename = f"{name}_{index}{ext}"
+        path = os.path.join(OUTPUT_DIR, numbered_filename)
+        if not os.path.exists(path):
+            break
+        index += 1
+
+    # Guardar el audio
     with open(path, "wb") as f:
         f.write(content)
+
     logging.info(f"✅ Audio guardado en: {path}")
     return path
+
 
 # -----------------------------
 # FUNCIONES DE CADA PROVEEDOR
