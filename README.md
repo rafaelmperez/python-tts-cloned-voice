@@ -48,3 +48,153 @@ mkdir -p audio_outputs
 Crea un archivo llamado .env en la raíz del proyecto con tus credenciales API.
 
 🗣️ ElevenLabs (voz clonada)
+API_KEY=tu_api_key_de_elevenlabs
+VOICE_ID=tu_voice_id_clonada
+TTS_PROVIDER=elevenlabs
+
+🧠 OpenAI TTS (voz neural)
+
+API_KEY=tu_api_key_de_openai
+TTS_PROVIDER=openai
+
+Variable	Descripción	Obligatoria
+API_KEY	Clave de API del proveedor seleccionado	✅
+VOICE_ID	ID de la voz clonada (solo para ElevenLabs)	✅ (EL)
+TTS_PROVIDER	Proveedor usado (elevenlabs o openai)	✅
+
+    ⚠️ No subas el archivo .env a GitHub. Contiene datos sensibles.
+
+🎙️ Usage
+
+# Texto directo
+python tts_script.py "Hola, esta es mi voz clonada"
+
+# Desde archivo .txt
+python tts_script.py -f texto.txt
+
+# Modo interactivo
+python tts_script.py
+
+🎧 El audio se genera en la carpeta:
+
+audio_outputs/output_elevenlabs.mp3
+
+o
+
+audio_outputs/output_openai.mp3
+
+🧰 Supported Providers
+Proveedor	Ventajas principales	Requisitos
+ElevenLabs	Clonado de voz con realismo profesional	API_KEY, VOICE_ID, TTS_PROVIDER=elevenlabs
+OpenAI TTS	Voces neurales de alta calidad y baja latencia	API_KEY, TTS_PROVIDER=openai
+🪄 Extensibility
+
+El script está diseñado para ampliarse fácilmente:
+
+    Crea una nueva función tts_<proveedor>().
+
+    Añade tu API o SDK correspondiente.
+
+    Registra el nuevo proveedor en generate_tts_audio().
+
+    Añade tus variables al .env.
+
+Ejemplos de posibles integraciones:
+
+    Play.ht
+
+    OpenVoice
+
+    VITS / Tacotron2 (local)
+
+🧠 Error Handling
+
+    401 Unauthorized: API key o VOICE_ID incorrectos.
+
+    Red/Timeout: errores de conexión manejados con try/except.
+
+    Archivo inválido: se notifica por consola y se aborta la ejecución.
+
+    Sin texto: se valida antes de llamar a la API.
+
+🧾 Logging
+
+El sistema de logs registra:
+
+    Proveedor usado
+
+    Errores y respuestas
+
+    Ruta de salida
+
+Archivo: tts_log.txt
+
+Formato:
+
+2025-11-07 14:22:10 [INFO] 🔊 Generando audio usando: ELEVENLABS
+2025-11-07 14:22:11 [INFO] ✅ Audio guardado en: audio_outputs/output_elevenlabs.mp3
+
+🧩 Project Structure
+
+python-tts-cloned-voice/
+├─ tts_script.py
+├─ requirements.txt
+├─ .gitignore
+├─ LICENSE
+├─ README.md
+├─ audio_outputs/
+└─ tts_log.txt
+
+💡 Contributing
+
+Contribuciones son bienvenidas 💬
+
+    Crea una rama feature/<nombre> o fix/<nombre>.
+
+    Cumple con PEP8 y añade docstrings.
+
+    Prueba los cambios antes de enviar un Pull Request.
+
+📜 License
+
+Distribuido bajo la licencia MIT.
+Consulta el archivo LICENSE
+
+para más detalles.
+💬 Acknowledgements
+
+    ElevenLabs
+
+por su API de clonación de voz.
+
+OpenAI
+
+    por su TTS neural.
+
+    Comunidad open-source de Python.
+
+🔎 GitHub SEO
+
+Keywords:
+python, text-to-speech, tts, ai, voice-cloning, openai, elevenlabs, automation, audio, speech-synthesis.
+
+One-liner SEO description:
+
+    Convert any text into natural-sounding speech using your cloned AI voice — built with Python, ElevenLabs, and OpenAI TTS.
+
+
+---
+
+✅ Este es el **README completo, final y optimizado para GitHub**, con todas las secciones exigidas:  
+- Configuración `.env`  
+- Ejemplos de uso  
+- Tabla de proveedores  
+- Estructura del proyecto  
+- Créditos  
+- SEO con keywords  
+
+---
+
+¿Quieres que te genere la **versión en inglés** del README (para mayor visibilidad internacional)?  
+Así puedes tener ambos en tu repo (`README_es.md` y `README.md`).
+
