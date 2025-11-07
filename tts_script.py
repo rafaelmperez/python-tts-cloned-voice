@@ -3,7 +3,7 @@
 """
 TTS Script - Conversión de texto a voz con tu voz clonada
 Compatible con ElevenLabs y OpenAI TTS
-Autor: TuNombre
+Autor: Rafael M.
 Versión: 1.2
 """
 
