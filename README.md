@@ -179,22 +179,5 @@ Keywords:
 python, text-to-speech, tts, ai, voice-cloning, openai, elevenlabs, automation, audio, speech-synthesis.
 
 One-liner SEO description:
-
-    Convert any text into natural-sounding speech using your cloned AI voice — built with Python, ElevenLabs, and OpenAI TTS.
-
-
----
-
-✅ Este es el **README completo, final y optimizado para GitHub**, con todas las secciones exigidas:  
-- Configuración `.env`  
-- Ejemplos de uso  
-- Tabla de proveedores  
-- Estructura del proyecto  
-- Créditos  
-- SEO con keywords  
-
----
-
-¿Quieres que te genere la **versión en inglés** del README (para mayor visibilidad internacional)?  
-Así puedes tener ambos en tu repo (`README_es.md` y `README.md`).
+Convert any text into natural-sounding speech using your cloned AI voice — built with Python, ElevenLabs, and OpenAI TTS.
 
